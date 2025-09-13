@@ -1,0 +1,72 @@
+/* Customizações para o Sistema de Documentos Cresol */
+
+.card {
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.btn-group .btn {
+    margin-right: 2px;
+}
+
+.table th {
+    border-top: none;
+}
+
+.content-header h1 {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.alert {
+    border-radius: 0.375rem;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.btn-delete:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s;
+}
+
+.list-group-item {
+    border-left: 3px solid #007bff;
+}
+
+.badge {
+    font-size: 0.75em;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    .btn-group .btn {
+        margin-bottom: 5px;
+    }
+    
+    .table-responsive {
+        font-size: 0.875rem;
+    }
+}
+
+/* Loading states */
+.btn[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* File upload styling */
+.form-control-file {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
