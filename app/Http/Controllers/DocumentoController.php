@@ -40,7 +40,7 @@ class DocumentoController extends Controller
         ]);
 
         $arquivo = $request->file('arquivo');
-        $conteudoBinario = base64_encode(file_get_contents($arquivo->path()));
+        $conteudoBinario = (file_get_contents($arquivo->path()));
 
         Documento::create([
             'pessoa_id' => $request->pessoa_id,
@@ -119,7 +119,7 @@ class DocumentoController extends Controller
      */
     public function download(Documento $documento)
     {
-        $conteudo = base64_decode($documento->conteudo_binario);
+        $conteudo = ($documento->conteudo_binario);
         
         return response($conteudo, 200)
             ->header('Content-Type', $documento->tipo_arquivo)
