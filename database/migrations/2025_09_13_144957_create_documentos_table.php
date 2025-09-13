@@ -18,7 +18,7 @@ return new class extends Migration
             $table->enum('tipo', ['pessoal', 'financeiro']);
             $table->string('tipo_arquivo');
             $table->string('nome_original');
-            $table->longText('conteudo_binario');
+            $table->binary('conteudo_binario');
             $table->timestamps();
         });
     }
